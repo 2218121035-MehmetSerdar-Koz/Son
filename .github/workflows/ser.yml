@@ -1,13 +1,33 @@
-name: SayiTahminOyunu
-version: "1.0"
-description: "Bir sayı tahmin oyunu uygulaması."
-entrypoint: sayi_tahmin_oyunu.py
-requirements:
-  - python>=3.6
-commands:
-  run:
-    description: "Oyunu başlatır."
-    command: python sayi_tahmin_oyunu.py
-tests:
-  - name: "Doğru tahmin testi"
-    command: python -m unittest test_sayi_tahmin.py
+name: SayiTahminOyunu CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Depoyu Klonla
+        uses: actions/checkout@v3
+
+      - name: Python Kurulum
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.8'  # Python sürümünü ayarlayın
+
+      - name: Bağımlılıkları Yükle
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt || echo "No requirements file found."
+
+      - name: Uygulamayı Çalıştır
+        run: python sayi_tahmin_oyunu.py
+
+      - name: Unit Testleri Çalıştır
+        run: python -m unittest test_sayi_tahmin.py
