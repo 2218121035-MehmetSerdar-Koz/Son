@@ -1,0 +1,13 @@
+name: SayiTahminOyunu
+version: "1.0"
+description: "Bir sayı tahmin oyunu uygulaması."
+entrypoint: sayi_tahmin_oyunu.py
+requirements:
+  - python>=3.6
+commands:
+  run:
+    description: "Oyunu başlatır."
+    command: python sayi_tahmin_oyunu.py
+tests:
+  - name: "Doğru tahmin testi"
+    command: python -m unittest test_sayi_tahmin.py
