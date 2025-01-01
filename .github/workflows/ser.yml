@@ -27,7 +27,7 @@ jobs:
           pip install -r requirements.txt || echo "No requirements file found."
 
       - name: Uygulamayı Çalıştır
-        run: python sayi_tahmin_oyunu.py
+        run: python Tahmin.py
 
       - name: Unit Testleri Çalıştır
-        run: python -m unittest test_sayi_tahmin.py
+        run: python -m test_Tahmin.py
