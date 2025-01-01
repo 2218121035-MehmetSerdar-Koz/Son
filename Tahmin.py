@@ -24,3 +24,4 @@ def sayi_tahmin_oyunu():
 
 # Oyunu başlat
 sayi_tahmin_oyunu()
+#Mehmet Serdar KOZ
