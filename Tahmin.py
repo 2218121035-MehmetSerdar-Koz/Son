@@ -1,5 +1,14 @@
 import random
 
+def tahmin_et(sayi, tahmin):
+    """Rastgele seçilen bir sayı ile tahmini karşılaştırır."""
+    if tahmin < sayi:
+        return "Daha büyük"
+    elif tahmin > sayi:
+        return "Daha küçük"
+    else:
+        return "Doğru"
+
 def sayi_tahmin_oyunu():
     print("Sayı Tahmin Oyununa Hoş Geldiniz!")
     print("1 ile 100 arasında bir sayı tuttum. Bakalım kaç tahminde bileceksiniz.")
@@ -24,4 +33,3 @@ def sayi_tahmin_oyunu():
 
 # Oyunu başlat
 sayi_tahmin_oyunu()
-#Mehmet Serdar KOZ

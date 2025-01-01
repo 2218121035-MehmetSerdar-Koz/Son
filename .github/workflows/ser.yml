@@ -30,4 +30,4 @@ jobs:
         run: python Tahmin.py
 
       - name: Unit Testleri Çalıştır
-        run: python -m test_Tahmin.py
+        run: python -m unittest test_Tahmin.py

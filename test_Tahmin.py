@@ -1,5 +1,5 @@
 import unittest
-from sayi_tahmin_oyunu import tahmin_et
+from Tahmin import tahmin_et  # Tahmin.py dosyasındaki tahmin_et fonksiyonunu çağırıyor
 
 class TestSayiTahminOyunu(unittest.TestCase):
 
@@ -14,4 +14,3 @@ class TestSayiTahminOyunu(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-#Mehmet  Serrdar Koz
